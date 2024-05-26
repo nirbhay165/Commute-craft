@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Dashboard</title>
+    <style>
+        /* General Styles */
+        body {
+            background-image: url("./hack2.jpg");
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .profile img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        /* Main Content Styles */
+        .container {
+            margin: 0 auto;
+            padding: 20px;
+            max-width: 800px;
+        }
+
+        section {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(245, 234, 234, 0.1);
+        }
+
+        section h1 {
+            margin-top: 0;
+            color: #fff;
+        }
+
+        section p {
+            color: #ddd;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+            color: #ddd;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Driver Dashboard</div>
+        <div class="profile">
+            <img src="profile.jpg" alt="Profile Picture">
+        </div>
+    </header>
+    
+    <div class="container">
+        <section>
+            <h1>Dashboard</h1>
+            <p>Welcome, shankar!</p>
+            <p>Today’s Date: <span id="date"></span></p>
+        </section>
+
+        <section>
+            <h1>Upcoming Schedules</h1>
+            <ul>
+                <li>
+                    <h2>Trip to School</h2>
+                    <p>Date: May 25, 2024</p>
+                    <p>Time: 7:30 AM</p>
+                    <p>Students: 10</p>
+                </li>
+                <!-- More trips can be listed here -->
+            </ul>
+        </section>
+
+        <section>
+            <h1>Attendance Tracking</h1>
+            <form>
+                <label for="student1">Student 1:</label>
+                <input type="checkbox" id="student1" name="student1"> Picked Up<br>
+                <!-- More students can be listed here -->
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
+        <section>
+            <h1>Messages</h1>
+            <div class="messages">
+                <p>No new messages.</p>
+                <!-- Messages will be displayed here -->
+            </div>
+            <form>
+                <input type="text" placeholder="Type a message">
+                <button type="submit">Send</button>
+            </form>
+        </section>
+
+        <section>
+            <h1>Maintenance Logs</h1>
+            <p>No upcoming maintenance.</p>
+            <!-- Maintenance logs can be listed here -->
+        </section>
+    </div>
+
+    <footer>
+        <p>Contact Support: support@studenttransport.com</p>
+    </footer>
+
+    <script>
+        // Display current date
+        document.getElementById('date').textContent = new Date().toLocaleDateString();
+    </script>
+</body>
+</html>
